@@ -19,6 +19,22 @@ height: auto;
 display: block;
 }
 
+h1, h2, h3,
+h4 {
+text-transform: uppercase;
+color: #28739e;
+}
+
+h5, h6 {
+font-weight: normal;
+font-size: 0.8rem;
+}
+
+p {
+line-height: 1.3;
+font-size: 0.9em;
+}
+
 /* navigation navigation navigation navigation navigation */
 
 header {
@@ -60,13 +76,16 @@ font-weight: 700;
 main {
 background-color: #f9ebf2;
 width: 50vw;
-height: 100vh;
 margin: 0 auto;
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 grid-gap: 1em;
 padding: 1rem;
 justify-content: center;
+}
+
+#grid_indhold img {
+padding-bottom: 0.5rem;
 }
 
 #indhold {
@@ -102,7 +121,7 @@ padding-top: 2rem;
 
 #bg {
 width: 100vw;
-height: 100vh;
+height: auto;
 background-color:#3f90cd;
 }
 
@@ -123,4 +142,21 @@ display: none;
 #popop article {
 width: 40%;
 background-color: #f9ebf2;
+}
+
+#popop article h2,
+#popop article p,
+#popop article h3,
+#popop article h5,
+#popop article h6 {
+padding-inline: 1rem;
+}
+
+#popop img {
+max-height: 100%;
+padding-bottom: 1rem;
+}
+
+#popop article p {
+padding-bottom: 1rem;
 }

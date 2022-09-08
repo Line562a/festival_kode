@@ -37,9 +37,10 @@ main.textContent = "";
     const klon = template.cloneNode(true);
     klon.querySelector("article").addEventListener("click", () => visMad(mad));
     klon.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
-    klon.querySelector(".navn").textContent = mad.navn;
-    klon.querySelector(".kortbeskrivelse").textContent = mad.kortbeskrivelse + ".";
     klon.querySelector(".pris").textContent = mad.pris;
+    klon.querySelector(".dato").textContent = mad.dato;
+    klon.querySelector(".navn").textContent = mad.navn;
+    klon.querySelector(".kortbeskrivelse").textContent = mad.kortbeskrivelse;
     main.appendChild(klon);
     }
   });
@@ -50,8 +51,9 @@ function visMad(mad) {
   const popop = document.querySelector("#popop");
   popop.style.display = "flex";
   popop.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
+  popop.querySelector(".dato").textContent = mad.dato;
   popop.querySelector(".navn").textContent = mad.navn;
-  popop.querySelector(".pris").textContent = mad.pris + " kr.";
+  popop.querySelector(".pris").textContent = mad.pris;
   popop.querySelector(".langbeskrivelse").textContent = mad.langbeskrivelse;
   popop.addEventListener("click", () => (popop.style.display="none"));
 }
