@@ -1,0 +1,30 @@
+.navbar {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.logo {
+width: 9%;
+}
+
+.nav_list {
+  list-style-type: none;
+}
+
+.nav_list, 
+li {
+  display: inline-block;
+  padding: 1.2rem 1rem;
+}
+
+.navbar a {
+text-decoration: none;
+color: #333333;
+font-family: "Playfair Display", serif;
+font-size: 0.8rem;
+}
+
+.navbar a:hover {
+    color: pink;
+}
