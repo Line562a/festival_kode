@@ -6,15 +6,15 @@ const mereinfo = {
   },
 };
 const filterKnapper = document.querySelectorAll("nav button");
-filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMad));
+filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerMad));
 hentData;
 
 function filtrerMad() {
-filter = this.dataset.kategori;
-document.querySelector(".valgt").classList.remove("valgt");
-this.classList.add("valgt");
-vis(data);
-header.textContent = this.textContent;
+  filter = this.dataset.kategori;
+  document.querySelector(".valgt").classList.remove("valgt");
+  this.classList.add("valgt");
+  vis(data);
+  header.textContent = this.textContent;
 }
 
 let data;
@@ -27,21 +27,21 @@ async function hentData() {
 }
 
 function vis() {
-const main = document.querySelector("main");
-const template = document.querySelector("template").content;
-main.textContent = "";
+  const main = document.querySelector("main");
+  const template = document.querySelector("template").content;
+  main.textContent = "";
 
   data.forEach((mad) => {
     //console.log("placering", mad.placering);
     if (filter == mad.placering || filter == "alle") {
-    const klon = template.cloneNode(true);
-    klon.querySelector("article").addEventListener("click", () => visMad(mad));
-    klon.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
-    klon.querySelector(".pris").textContent = mad.pris;
-    klon.querySelector(".dato").textContent = mad.dato;
-    klon.querySelector(".navn").textContent = mad.navn;
-    klon.querySelector(".kortbeskrivelse").textContent = mad.kortbeskrivelse;
-    main.appendChild(klon);
+      const klon = template.cloneNode(true);
+      klon.querySelector("article").addEventListener("click", () => visMad(mad));
+      klon.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
+      klon.querySelector(".pris").textContent = mad.pris;
+      klon.querySelector(".dato").textContent = mad.dato;
+      klon.querySelector(".navn").textContent = mad.navn;
+      klon.querySelector(".kortbeskrivelse").textContent = mad.kortbeskrivelse;
+      main.appendChild(klon);
     }
   });
 }
@@ -55,6 +55,6 @@ function visMad(mad) {
   popop.querySelector(".navn").textContent = mad.navn;
   popop.querySelector(".pris").textContent = mad.pris;
   popop.querySelector(".langbeskrivelse").textContent = mad.langbeskrivelse;
-  popop.addEventListener("click", () => (popop.style.display="none"));
+  popop.addEventListener("click", () => (popop.style.display = "none"));
 }
 hentData();
