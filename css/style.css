@@ -4,6 +4,30 @@
   box-sizing: border-box;
   margin: 0;
   font-family: sans-serif;
+  --lilla: #774FEB;
+  --pink: #F3B3A6;
+  --sort: #333333;
+  font-family: gothambook;
+}
+
+@font-face {
+font-family: gothambook;
+src: url(../gotham/gotham-book.otf);
+}
+
+@font-face {
+font-family: gothamblack;
+src: url(../gotham/gotham-black.otf);
+}
+
+@font-face {
+font-family: gothambold;
+src: url(../gotham/gotham-bold.otf);
+}
+
+@font-face {
+font-family: gothamlight;
+src: url(../gotham/gotham-light.otf);
 }
 
 body {
@@ -25,7 +49,8 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
-  color: #28739e;
+  color: var(--sort);
+  font-family: gothambold;
 }
 
 h5,
@@ -42,7 +67,7 @@ p {
 /* navigation navigation navigation navigation navigation */
 
 header {
-  background-color: #f9ebf2;
+  background-color: white;
   width: 50vw;
   height: 10vh;
   margin: 0 auto;
@@ -72,13 +97,13 @@ li {
 }
 
 .navbar a:hover {
-  font-weight: 700;
+  font-family: gothambold;
 }
 
 /* mainindhold mainindhold mainindhold mainindhold */
 
 main {
-  background-color: #f9ebf2;
+  background-color: white;
   width: 50vw;
   margin: 0 auto;
   display: grid;
@@ -93,14 +118,14 @@ main {
 }
 
 #indhold {
-  background-color: #f9ebf2;
+  background-color: white;
   width: 50vw;
   height: 90vh;
   margin: 0 auto;
 }
 
 #billedebox {
-  background-color: #28739e;
+  background-color: var(--lilla);
   height: 65vh;
   width: 40vw;
   margin: 0 auto;
@@ -113,7 +138,7 @@ main {
   text-transform: uppercase;
   width: 85%;
   margin: 0 auto;
-  color: #28739e;
+  color: var(--sort);
   line-height: 1.2;
 }
 
@@ -126,7 +151,7 @@ main {
 #bg {
   width: 100vw;
   height: auto;
-  background-color: #3f90cd;
+  background-color: var(--lilla);
 }
 
 /* popup popup popup popup popup popup popup popup */
@@ -145,7 +170,7 @@ main {
 
 #popop article {
   width: 40%;
-  background-color: #f9ebf2;
+  background-color: white;
 }
 
 #popop article h2,
@@ -153,7 +178,7 @@ main {
 #popop article h3,
 #popop article h5,
 #popop article h6 {
-  padding-inline: 1rem;
+padding-inline: 1rem;
 }
 
 #popop img {
