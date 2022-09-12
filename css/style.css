@@ -69,13 +69,13 @@ p {
 header {
   background-color: white;
   width: 50vw;
-  height: 10vh;
+  height: 15vh;
   margin: 0 auto;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
   align-items: center;
 }
 
@@ -92,7 +92,6 @@ li {
 .navbar a {
   text-decoration: none;
   color: #000;
-  text-transform: uppercase;
   font-size: 1rem;
 }
 
@@ -108,8 +107,6 @@ main {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1em;
-  padding: 1rem;
   justify-content: center;
 }
 
@@ -120,13 +117,13 @@ main {
 #indhold {
   background-color: white;
   width: 50vw;
-  height: 90vh;
+  height: 85vh;
   margin: 0 auto;
 }
 
 #billedebox {
   background-color: var(--lilla);
-  height: 65vh;
+  height: 60vh;
   width: 40vw;
   margin: 0 auto;
 }
