@@ -1,8 +1,8 @@
-const endpoint = "https://passionfest-9b8b.restdb.io/rest/musikmad";
+const endpoint = "https://passionfest-9b8b.restdb.io/rest/musikkategori";
 
 const mereinfo = {
   headers: {
-    "x-apikey": "6319a7ace906d642de32431e",
+    "x-apikey": "631ef7f7fdc15b0265f172fc",
   },
 };
 const filterKnapper = document.querySelectorAll("nav button");
@@ -31,30 +31,28 @@ function vis() {
   const template = document.querySelector("template").content;
   main.textContent = "";
 
-  data.forEach((mad) => {
-    //console.log("placering", mad.placering);
-    if (filter == mad.placering || filter == "alle") {
+  data.forEach((artist) => {
+    //console.log("placering", artist.placering);
+    if (filter == artist.placering || filter == "alle") {
       const klon = template.cloneNode(true);
-      klon.querySelector("article").addEventListener("click", () => visMad(mad));
-      klon.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
-      klon.querySelector(".pris").textContent = mad.pris;
-      klon.querySelector(".dato").textContent = mad.dato;
-      klon.querySelector(".navn").textContent = mad.navn;
-      klon.querySelector(".kortbeskrivelse").textContent = mad.kortbeskrivelse;
+      klon.querySelector("article").addEventListener("click", () => visArtist(artist));
+      klon.querySelector(".billede").src = "images/" + artist.billede + ".jpg";
+      klon.querySelector(".dato").textContent = artist.dato;
+      klon.querySelector(".navn").textContent = artist.navn;
+      klon.querySelector(".kortbeskrivelse").textContent = artist.kortbeskrivelse;
       main.appendChild(klon);
     }
   });
 }
 
-function visMad(mad) {
-  console.log(mad);
+function visArtist(artist) {
+  console.log(artist);
   const popop = document.querySelector("#popop");
   popop.style.display = "flex";
-  popop.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
-  popop.querySelector(".dato").textContent = mad.dato;
-  popop.querySelector(".navn").textContent = mad.navn;
-  popop.querySelector(".pris").textContent = mad.pris;
-  popop.querySelector(".langbeskrivelse").textContent = mad.langbeskrivelse;
+  popop.querySelector(".billede").src = "images/" + artist.billede + ".jpg";
+  popop.querySelector(".dato").textContent = artist.dato;
+  popop.querySelector(".navn").textContent = artist.navn;
+  popop.querySelector(".langbeskrivelse").textContent = artist.langbeskrivelse;
   popop.addEventListener("click", () => (popop.style.display = "none"));
 }
 hentData();

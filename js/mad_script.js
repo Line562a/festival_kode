@@ -1,8 +1,8 @@
-const endpoint = "https://passionfest-9b8b.restdb.io/rest/musikmad";
+const endpoint = "https://passionfest-9b8b.restdb.io/rest/madkategori";
 
 const mereinfo = {
   headers: {
-    "x-apikey": "6319a7ace906d642de32431e",
+    "x-apikey": "631ef7f7fdc15b0265f172fc",
   },
 };
 const filterKnapper = document.querySelectorAll("nav button");
@@ -37,7 +37,6 @@ function vis() {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visMad(mad));
       klon.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
-      klon.querySelector(".pris").textContent = mad.pris;
       klon.querySelector(".dato").textContent = mad.dato;
       klon.querySelector(".navn").textContent = mad.navn;
       klon.querySelector(".kortbeskrivelse").textContent = mad.kortbeskrivelse;
@@ -53,7 +52,6 @@ function visMad(mad) {
   popop.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
   popop.querySelector(".dato").textContent = mad.dato;
   popop.querySelector(".navn").textContent = mad.navn;
-  popop.querySelector(".pris").textContent = mad.pris;
   popop.querySelector(".langbeskrivelse").textContent = mad.langbeskrivelse;
   popop.addEventListener("click", () => (popop.style.display = "none"));
 }
