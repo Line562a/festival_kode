@@ -5,16 +5,15 @@ const mereinfo = {
     "x-apikey": "631ef7f7fdc15b0265f172fc",
   },
 };
-const filterKnapper = document.querySelectorAll("nav button");
-filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerMad));
+const filterKnapper = document.querySelectorAll("button");
+filterKnapper.forEach(knap => knap.addEventListener("click", filtrerScene));
 hentData;
 
-function filtrerMad() {
-  filter = this.dataset.kategori;
-  document.querySelector(".valgt").classList.remove("valgt");
-  this.classList.add("valgt");
-  vis(data);
-  header.textContent = this.textContent;
+function filtrerScene() {
+filter = this.dataset.scene;
+document.querySelector(".valgt").classList.remove("valgt");
+this.classList.add("valgt");
+vis(data);
 }
 
 let data;
@@ -32,8 +31,8 @@ function vis() {
   main.textContent = "";
 
   data.forEach((artist) => {
-    //console.log("placering", artist.placering);
-    if (filter == artist.placering || filter == "alle") {
+    //console.log(artist.scene);
+    if (filter == artist.scene || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visArtist(artist));
       klon.querySelector(".billede").src = "images/" + artist.billede + ".jpg";
