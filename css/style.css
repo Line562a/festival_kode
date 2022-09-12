@@ -129,7 +129,6 @@ padding-bottom: 0.5rem;
 .indhold {
 background-color: white;
 width: 50vw;
-height: 85vh;
 margin: 0 auto;
 }
 
@@ -140,6 +139,10 @@ width: 40vw;
 margin: 0 auto;
 }
 
+#program {
+padding-bottom: 3rem;
+}
+
 #program h2,
 #program h3,
 #program p {
@@ -148,6 +151,17 @@ text-transform: uppercase;
 width: 85%;
 margin: 0 auto;
 color: var(--sort);
+}
+
+#program h2 {
+line-height: 1;
+}
+
+#program h3 {
+line-height: 1;
+}
+
+#program p {
 line-height: 1.2;
 }
 
@@ -242,6 +256,54 @@ padding-bottom: 1rem;
 padding-bottom: 1rem;
 }
 
+/* footer footer footer footer footer footer footer */
+
+footer {
+height: auto;
+width: 100%;
+background-color: var(--lilla);
+margin-top: 1rem;
+}
+
+.grid_footer {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+gap: 2rem;
+width: 70%;
+margin: 0 auto;
+padding-block: 2rem;
+}
+
+.footer_col {
+display: flex;
+flex-direction: column;
+}
+
+.footer_col :last-child {
+margin-top: auto;
+}
+
+footer a {
+color: white;
+text-decoration: none;
+}
+
+footer h3 {
+color: white;
+margin-bottom: 1rem;
+}
+
+footer p {
+color: white;
+line-height: 1.8;
+}
+
+.footer_col_social img {
+display: inline;
+width: 10%;
+margin-right: 0.5rem;
+}
+
 /* responsive responsive responsive responsive responsive */
 
 @media all and (max-width: 800px) {
@@ -282,8 +344,8 @@ border-bottom: solid 5px var(--lilla);
 }
 
 .menu_burger {
-width: 20px;
-height: 2px;
+width: 25px;
+height: 3px;
 margin-bottom: 5px;
 background-color: var(--lilla);
 }
@@ -313,10 +375,6 @@ height: auto;
 
 main {
 width: 75%;
-}
-
-#program {
-padding-bottom: 3rem;
 }
 
 }
