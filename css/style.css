@@ -7,6 +7,9 @@
   --lilla: #774feb;
   --pink: #f3b3a6;
   --sort: #333333;
+  --font: 1rem;
+  --line: calc(var(--font) * 2);
+  --move: calc(var(--line) * 2);
   font-family: gothambook;
 }
 
@@ -49,7 +52,6 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
-  color: var(--sort);
   font-family: gothambold;
 }
 
