@@ -9,6 +9,7 @@ const filterKnapper = document.querySelectorAll("button");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerScene));
 hentData;
 
+    //Funktion der får filtrering til at virke
 function filtrerScene() {
 filter = this.dataset.scene;
 document.querySelector(".valgt").classList.remove("valgt");
@@ -19,20 +20,21 @@ vis(data);
 let data;
 let filter = "alle";
 
+    //Henter JSON
 async function hentData() {
   const respons = await fetch(endpoint, mereinfo);
   data = await respons.json();
   vis(data);
 }
 
+    //Viser alt content
 function vis() {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
   main.textContent = "";
 
+    //Duplikerer alle "kasser" flere gange, med nyt indhold 
   data.forEach((artist) => {
-    console.log(artist, filter)
-    //console.log(artist.scene);
     if (filter == artist.scene || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visArtist(artist));

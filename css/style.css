@@ -47,6 +47,11 @@ iframe {
   display: block;
 }
 
+video {
+width: 80%;
+margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
@@ -64,6 +69,33 @@ h6 {
 p {
   line-height: 1.4;
   font-size: 0.9em;
+}
+
+#knapper {
+  width: 50vw;
+  background-color: var(--lilla);
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 2fr));
+  gap: 1rem;
+}
+
+button {
+  background-color: white;
+  color: var(--lilla);
+  border: none;
+  padding: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: gothambook;
+}
+
+button:hover {
+  font-family: gothamblack;
+  background-color: var(--pink);
+  transition: 1s;
 }
 
 /* navigation navigation navigation navigation navigation */
@@ -145,7 +177,6 @@ main {
 
 .grid_indhold {
 display: grid;
-
 }
 
 .grid_indhold img, 
@@ -177,6 +208,13 @@ z-index: 1;
   margin: 0 auto;
 }
 
+.indhold_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* forside forside forside forside forside forside */
+
 #program {
   padding-bottom: 3rem;
 }
@@ -205,11 +243,6 @@ padding-bottom: 1rem;
   line-height: 1;
 }
 
-video {
-width: 80%;
-margin: 0 auto;
-}
-
 #program p {
   line-height: 1.2;
 }
@@ -218,10 +251,7 @@ margin: 0 auto;
   padding-top: 2rem;
 }
 
-.indhold_container {
-  width: 80%;
-  margin: 0 auto;
-}
+/* om os om os om os om os om os om os om os */
 
 .omos_indhold {
   width: 70%;
@@ -255,33 +285,6 @@ margin: 0 auto;
   text-align: center;
   font-size: 1.2em;
   line-height: 1.1;
-}
-
-#knapper {
-  width: 50vw;
-  background-color: var(--lilla);
-  margin: 0 auto;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 2fr));
-  gap: 1rem;
-}
-
-button {
-  background-color: white;
-  color: var(--lilla);
-  border: none;
-  padding: 0.5em;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  font-family: gothambook;
-}
-
-button:hover {
-  font-family: gothamblack;
-  background-color: var(--pink);
-  transition: 1s;
 }
 
 /* background background background background background */
@@ -352,7 +355,6 @@ footer {
   margin: 0 auto;
   padding-block: 2rem;
 }
-
 
 .footer_col {
   display: flex;

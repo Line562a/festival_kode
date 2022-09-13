@@ -6,33 +6,25 @@ const mereinfo = {
   },
 };
 const filterKnapper = document.querySelectorAll("nav button");
-filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerMad));
-hentData;
-
-function filtrerMad() {
-  filter = this.dataset.kategori;
-  document.querySelector(".valgt").classList.remove("valgt");
-  this.classList.add("valgt");
-  vis(data);
-  header.textContent = this.textContent;
-}
 
 let data;
 let filter = "alle";
 
+    //Henter JSON
 async function hentData() {
   const respons = await fetch(endpoint, mereinfo);
   data = await respons.json();
   vis(data);
 }
 
+    //Viser alt content
 function vis() {
   const main = document.querySelector("main");
   const template = document.querySelector("template").content;
   main.textContent = "";
 
+    //Duplikerer alle "kasser" flere gange, med nyt indhold 
   data.forEach((mad) => {
-    //console.log("placering", mad.placering);
     if (filter == mad.placering || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visMad(mad));
@@ -44,6 +36,7 @@ function vis() {
   });
 }
 
+    //Klikbar popop funktion
 function visMad(mad) {
   console.log(mad);
   const popop = document.querySelector("#popop");
