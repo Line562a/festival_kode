@@ -139,6 +139,17 @@ main {
   text-align: center;
 }
 
+.grid_indhold {
+display: grid;
+}
+
+.grid_indhold img, 
+.article_text {
+grid-column: 1/1;
+grid-row: 1/1;
+place-self: center center;
+}
+
 .indhold {
   background-color: white;
   width: 50vw;
@@ -154,6 +165,12 @@ main {
 
 #program {
   padding-bottom: 3rem;
+}
+
+#program img {
+width: 45%;
+margin: 0 auto;
+padding-bottom: 1rem;
 }
 
 #program h2,
@@ -438,6 +455,10 @@ footer p {
     text-align: center;
     padding-block: 1rem;
   }
+
+#program img {
+width: 60%;
+}
 }
 
 @media all and (max-width: 660px) {

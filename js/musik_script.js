@@ -31,6 +31,7 @@ function vis() {
   main.textContent = "";
 
   data.forEach((artist) => {
+    console.log(artist, filter)
     //console.log(artist.scene);
     if (filter == artist.scene || filter == "alle") {
       const klon = template.cloneNode(true);
