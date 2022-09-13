@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FEST | Gruppe 9</title>
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/generel.css" />
-<meta name="robots" content="noindex" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEST | Gruppe 9</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <meta name="robots" content="noindex" />
+  </head>
 
-<body>
-<section id="bg">
-<header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.svg" width="155" height="70" alt="FEST logo" /></a>
-    </div>
-    
-    <ul class="nav_list" id="navi-list">
-      <li><a href="musik.html"><span class="nav_valgt">Musik</span></a></li>
-      <li><a href="mad.html">Mad</a></li>
-      <li><a href="kontakt.html">Om os</a></li>
-    </ul>
+  <body>
+    <section id="bg">
+      <header>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo.svg" width="155" height="70" alt="FEST logo" /></a>
+          </div>
 
-    <div class="menu" id="toggle-button">
-      <div class="menu_burger"></div>
-      <div class="menu_burger"></div>
-      <div class="menu_burger"></div>
-    </div>
-  </nav>
-</header>
+          <ul class="nav_list" id="navi-list">
+            <li>
+              <a href="musik.html"><span class="nav_valgt">Musik</span></a>
+            </li>
+            <li><a href="mad.html">Mad</a></li>
+            <li><a href="kontakt.html">Om os</a></li>
+          </ul>
 
-<section id="knapper">
-  <button data-kategori="alle" class="valgt">Alle</button>
-  <button data-kategori="Hvidscene">Hvidscene</button>
-  <button data-kategori="Lillascene">Lillascene</button>
-  <button data-kategori="Pinkscene">Pinkscene</button>
-</section>
+          <div class="menu" id="toggle-button">
+            <div class="menu_burger"></div>
+            <div class="menu_burger"></div>
+            <div class="menu_burger"></div>
+          </div>
+        </nav>
+      </header>
 
-<h1 class="artister_overskrift">Artister</h1>
+      <section id="knapper">
+        <button data-kategori="alle" class="valgt">Alle</button>
+        <button data-kategori="Hvidscene">Hvidscene</button>
+        <button data-kategori="Lillascene">Lillascene</button>
+        <button data-kategori="Pinkscene">Pinkscene</button>
+      </section>
 
-<main></main>
-<template>
-  <article id="grid_indhold">
-    <img src="" alt="" class="billede" />
-    <div class="article_text">
-      <h2 class="navn"></h2>
-      <p class="kortbeskrivelse"></p>
-    </div>
-  </article>
-</template>
+      <h1 class="artister_overskrift">Artister</h1>
 
-<div id="popop">
-  <article>
-    <img src="" alt="" class="billede" />
-      <h5 class="pris"></h5>
-      <h5 class="dato"></h5>
-      <h2 class="navn"></h2>
-      <p class="langbeskrivelse"></p>
-  </article>
-</div>
-</section>
+      <main></main>
+      <template>
+        <article id="grid_indhold">
+          <img src="" alt="" class="billede" />
+          <div class="article_text">
+            <h2 class="navn"></h2>
+            <p class="kortbeskrivelse"></p>
+          </div>
+        </article>
+      </template>
 
-<footer>
-  <div class="grid_footer">
-    <div class="footer_col">
-      <h3>Kontakt</h3>
-      <p>+45 12 34 56 78</p>
-      <p>fest@mail.dk</p>
-      <p>Hejsa, Danmark</p>
-    </div>
+      <div id="popop">
+        <article>
+          <img src="" alt="" class="billede" />
+          <h5 class="pris"></h5>
+          <h5 class="dato"></h5>
+          <h2 class="navn"></h2>
+          <p class="langbeskrivelse"></p>
+        </article>
+      </div>
+    </section>
 
-    <div class="footer_col">
-      <h3>Links</h3>
-      <p><a href="#">Biletter</a></p>
-      <p><a href="#">Nyheder</a></p>
-      <p><a href="#">Bliv frivillig</a></p>
-    </div>
-  </div>
-</footer>
+    <footer>
+      <div class="grid_footer">
+        <div class="footer_col">
+          <h3>Kontakt</h3>
+          <p>+45 12 34 56 78</p>
+          <p>fest@mail.dk</p>
+          <p>Hejsa, Danmark</p>
+        </div>
 
-<script src="js/musik_script.js"></script>
-<script src="js/burger_menu.js"></script>
-<body></body>
-</body>
+        <div class="footer_col">
+          <h3>Links</h3>
+          <p><a href="#">Billetter</a></p>
+          <p><a href="#">Nyheder</a></p>
+          <p><a href="#">Bliv frivillig</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/musik_script.js"></script>
+    <script src="js/burger_menu.js"></script>
+    <body></body>
+  </body>
 </html>
