@@ -38,7 +38,7 @@ function vis() {
     if (filter == artist.scene || filter == "alle") {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visArtist(artist));
-      klon.querySelector(".billede").src = "images/" + artist.billede + ".jpg";
+      klon.querySelector(".billede").src = "images/" + artist.billede + ".webp";
       klon.querySelector(".dato").textContent = artist.dato;
       klon.querySelector(".navn").textContent = artist.navn;
       main.appendChild(klon);
@@ -50,7 +50,7 @@ function visArtist(artist) {
   console.log(artist);
   const popop = document.querySelector("#popop");
   popop.style.display = "flex";
-  popop.querySelector(".billede").src = "images/" + artist.billede + ".jpg";
+  popop.querySelector(".billede").src = "images/" + artist.billede + ".webp";
   popop.querySelector(".dato").textContent = artist.dato;
   popop.querySelector(".navn").textContent = artist.navn;
   popop.querySelector(".langbeskrivelse").textContent = artist.langbeskrivelse;
