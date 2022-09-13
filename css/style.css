@@ -107,6 +107,10 @@ li {
   font-family: gothambold;
 }
 
+.nav_valgt {
+font-family: gothamblack;
+}
+
 /* burgermenu burgermenu burgermenu burgermenu burgermenu */
 
 .menu {
@@ -121,14 +125,18 @@ main {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-content: center;
+}
+
+.artister_overskrift {
+width: 50vw;
+background-color: white;
+margin: 0 auto;
+text-align: center;
+padding-block: 1rem;
 }
 
 .article_text {
   text-align: center;
-}
-#grid_indhold img {
-  padding: 0.5rem;
 }
 
 .indhold {
@@ -214,12 +222,12 @@ main {
 }
 
 #knapper {
-  width: 50%;
+  width: 50vw;
   background-color: var(--lilla);
   margin: 0 auto;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 2fr));
   gap: 1rem;
 }
 
@@ -230,6 +238,7 @@ button {
   padding: 0.5em;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 0.8rem;
   font-family: gothambook;
 }
 
@@ -266,7 +275,7 @@ body {
 }
 
 #popop article {
-  width: 40%;
+  width: 30%;
   background-color: white;
 }
 
@@ -304,6 +313,10 @@ footer {
   margin: 0 auto;
   padding-block: 2rem;
 }
+ 
+#grid_indhold {
+  cursor: pointer;
+}
 
 .footer_col {
   display: flex;
@@ -323,6 +336,7 @@ footer h3 {
   color: white;
   margin-bottom: 1rem;
 }
+
 
 footer p {
   color: white;
@@ -344,11 +358,15 @@ footer p {
     display: block;
   }
 
-  .logo {
-    width: 10%;
-    margin-left: 3rem;
-    padding-top: 1rem;
-  }
+.logo {
+width: 10%;
+margin-left: 3rem;
+padding-top: 1rem;
+}
+
+#knapper {
+  width: 75%;
+}
 
   .menu {
     display: block;
@@ -391,13 +409,18 @@ footer p {
   }
 
   header {
-    height: 13vh;
+    height: 17vh;
     width: 75%;
   }
 
   #billedebox {
     width: 60vw;
   }
+
+#popop article {
+width: 70%;
+background-color: white;
+}
 
   .indhold {
     width: 75%;
@@ -408,3 +431,15 @@ footer p {
     width: 75%;
   }
 }
+
+@media all and (max-width: 660px) {
+.logo {
+width: 15%;
+padding-top: 1.5rem;
+}
+
+header {
+height: 20vh;
+width: 75%;
+}
+} 

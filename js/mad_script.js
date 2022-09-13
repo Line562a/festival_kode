@@ -37,9 +37,7 @@ function vis() {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visMad(mad));
       klon.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
-      klon.querySelector(".dato").textContent = mad.dato;
       klon.querySelector(".navn").textContent = mad.navn;
-      klon.querySelector(".kortbeskrivelse").textContent = mad.kortbeskrivelse;
       main.appendChild(klon);
     }
   });
