@@ -37,6 +37,7 @@ function vis() {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visArtist(artist));
       klon.querySelector(".billede").src = "images/" + artist.billede + ".jpg";
+      klon.querySelector(".dato").textContent = artist.dato;
       klon.querySelector(".navn").textContent = artist.navn;
       main.appendChild(klon);
     }

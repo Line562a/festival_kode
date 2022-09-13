@@ -137,10 +137,13 @@ main {
 
 .article_text {
   text-align: center;
+  color: white;
+  z-index: 1;
 }
 
 .grid_indhold {
 display: grid;
+
 }
 
 .grid_indhold img, 
@@ -148,6 +151,22 @@ display: grid;
 grid-column: 1/1;
 grid-row: 1/1;
 place-self: center center;
+}
+
+.grid_indhold {
+  cursor: pointer;
+  background: black;
+}
+
+.grid_indhold:hover {
+transform: scale(103%);
+overflow: hidden;
+transition: 0.3s;
+z-index: 1;
+}
+
+.grid_indhold img {
+  opacity: 0.6;
 }
 
 .indhold {
@@ -289,11 +308,13 @@ body {
   justify-content: center;
   align-items: center;
   display: none;
+  z-index: 2;
 }
 
 #popop article {
   width: 30%;
-  background-color: white;
+  color: white;
+  background-color: var(--lilla);
 }
 
 #popop article h2,
@@ -311,6 +332,7 @@ body {
 
 #popop article p {
   padding-bottom: 1rem;
+  font-size: 0.8rem;
 }
 
 /* footer footer footer footer footer footer footer */
@@ -332,9 +354,6 @@ footer {
   padding-block: 2rem;
 }
 
-#grid_indhold {
-  cursor: pointer;
-}
 
 .footer_col {
   display: flex;

@@ -37,6 +37,7 @@ function vis() {
       const klon = template.cloneNode(true);
       klon.querySelector("article").addEventListener("click", () => visMad(mad));
       klon.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
+      klon.querySelector(".pris").textContent = mad.pris + " kr.";
       klon.querySelector(".navn").textContent = mad.navn;
       main.appendChild(klon);
     }
@@ -48,7 +49,7 @@ function visMad(mad) {
   const popop = document.querySelector("#popop");
   popop.style.display = "flex";
   popop.querySelector(".billede").src = "images/" + mad.billede + ".jpg";
-  popop.querySelector(".dato").textContent = mad.dato;
+  popop.querySelector(".pris").textContent = mad.pris + " kr.";
   popop.querySelector(".navn").textContent = mad.navn;
   popop.querySelector(".langbeskrivelse").textContent = mad.langbeskrivelse;
   popop.addEventListener("click", () => (popop.style.display = "none"));
