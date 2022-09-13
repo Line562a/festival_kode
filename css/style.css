@@ -175,12 +175,6 @@ z-index: 1;
   margin: 0 auto;
 }
 
-#billedebox {
-  height: auto;
-  width: 40vw;
-  margin: 0 auto;
-}
-
 #program {
   padding-bottom: 3rem;
 }
@@ -207,6 +201,11 @@ padding-bottom: 1rem;
 
 #program h3 {
   line-height: 1;
+}
+
+video {
+width: 80%;
+margin: 0 auto;
 }
 
 #program p {
@@ -448,10 +447,6 @@ footer p {
     width: 75%;
   }
 
-  #billedebox {
-    width: 60vw;
-  }
-
   #popop article {
     width: 70%;
     background-color: white;
@@ -486,7 +481,7 @@ width: 60%;
   }
 
   header {
-    height: 20vh;
+    height: 15vh;
     width: 75%;
   }
 }
