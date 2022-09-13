@@ -37,7 +37,6 @@ function vis() {
       klon.querySelector("article").addEventListener("click", () => visArtist(artist));
       klon.querySelector(".billede").src = "images/" + artist.billede + ".jpg";
       klon.querySelector(".navn").textContent = artist.navn;
-      klon.querySelector(".kortbeskrivelse").textContent = artist.kortbeskrivelse;
       main.appendChild(klon);
     }
   });
