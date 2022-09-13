@@ -79,6 +79,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 3;
+
 }
 
 .logo {
@@ -346,7 +348,6 @@ footer {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-  align-items: center;
   width: 40%;
   margin: 0 auto;
   padding-block: 2rem;
